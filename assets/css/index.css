@@ -1,4 +1,4 @@
-@import url("./global.css");
+@import url("global.css");
 
 main {
   background: url("../images/background-subscription.png") no-repeat;
@@ -123,13 +123,11 @@ main {
   transition: transform 1s ease-in-out;
 }
 
-.subscription__plans:has(.subscription__card:nth-child(1):hover)
-  .subscription__card:nth-child(2) {
+.subscription__plans:has(.subscription__card:nth-child(1):hover) .subscription__card:nth-child(2) {
   transform: rotateY(-45deg);
 }
 
-.subscription__plans:has(.subscription__card:nth-child(2):hover)
-  .subscription__card:nth-child(1) {
+.subscription__plans:has(.subscription__card:nth-child(2):hover) .subscription__card:nth-child(1) {
   transform: rotateY(45deg);
 }
 
@@ -297,10 +295,8 @@ main {
     transform: none;
   }
 
-  .subscription__plans:has(.subscription__card:nth-child(1):hover)
-    .subscription__card:nth-child(2),
-  .subscription__plans:has(.subscription__card:nth-child(2):hover)
-    .subscription__card:nth-child(1) {
+  .subscription__plans:has(.subscription__card:nth-child(1):hover) .subscription__card:nth-child(2),
+  .subscription__plans:has(.subscription__card:nth-child(2):hover) .subscription__card:nth-child(1) {
     transform: none;
   }
 }
@@ -311,34 +307,43 @@ main {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
 
 @keyframes wiggle {
+
   0%,
   10% {
     transform: rotate(0);
   }
+
   15% {
     transform: rotate(-15deg);
   }
+
   20% {
     transform: rotate(10deg);
   }
+
   25% {
     transform: rotate(-10deg);
   }
+
   30% {
     transform: rotate(10deg);
   }
+
   35% {
     transform: rotate(-10deg);
   }
+
   40%,
   100% {
     transform: rotate(0);
